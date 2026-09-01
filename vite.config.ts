@@ -8,5 +8,5 @@ export default defineConfig({
   server: {
     open: true,
   },
-  base: "https://github.com/bridgertandy/GoldenPaws.git",
+  base: "/GoldenPaws/",
 });

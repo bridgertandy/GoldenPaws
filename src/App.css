@@ -2,8 +2,35 @@ section {
   margin: 15px;
 }
 
+header {
+  background-color: var(--logo-creme);
+  padding: 10px;
+  margin: 10px;
+  width: 95%;
+  height: 10vh;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  position: fixed;
+  align-self: center;
+  display: flex;
+  gap: 10px;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img-#background {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
 .logo {
-  width: 400px;
+  /* width: 100px; */
   height: auto;
 }
 
@@ -11,7 +38,7 @@ section {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 10px;
   color: black;
 
   div {
@@ -60,7 +87,12 @@ section {
   }
 
   > div {
-    background-color: var(--color-creme);
+    background-color: var(--logo-creme);
+    border: 2px solid var(--logo-gold);
+    border-radius: 10px;
+    /* box-shadow:
+      0 10px 25px -5px rgba(0, 0, 0, 0.2),
+      0 8px 16px -6px rgba(0, 0, 0, 0.05); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,8 +133,10 @@ section {
 
 .ticks {
   position: relative;
-  width: 100%;
-  border-top: 2px solid var(--color-creme);
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 2px solid var(--logo-gold);
 
   &::before,
   &::after {
@@ -114,11 +148,11 @@ section {
 
   &::before {
     left: 0;
-    border-left-color: var(--color-creme);
+    border-left-color: var(--color-soft-white);
   }
 
   &::after {
     right: 0;
-    border-right-color: var(--color-creme);
+    border-right-color: var(--color-soft-white);
   }
 }
