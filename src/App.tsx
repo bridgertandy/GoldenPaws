@@ -1,6 +1,7 @@
 import logo from "./assets/logo.jpg";
 import backgroundPic from "./assets/boise.png";
-import "./App.css";
+import "./styling/App.css";
+import "./styling/header.css";
 import { Mail, MapPin, Phone, Share2 } from "lucide-react";
 
 function App() {
@@ -8,37 +9,36 @@ function App() {
     <>
       <header>
         <div className="contact">
-          <div>
-            <Phone color="black" />
-            <a className="external-link" href="tel:+12089849293">
-              (208) 984-9293
-            </a>
-          </div>
-          <div>
-            <Mail color="black" />
-            <a
-              className="external-link"
-              href="mailto:Goldenpawsmobile@gmail.com"
-            >
-              Goldenpawsmobile@gmail.com
-            </a>
-          </div>
+          <Phone color="black" />
+          <a className="external-link" href="tel:+12089849293">
+            (208) 984-9293
+          </a>
         </div>
-        <img className="logo" src={logo}></img>
+
         <div className="contact">
-          <div>
-            <Share2 color="black" />
-            <a
-              className="external-link"
-              href="https://www.facebook.com/p/Golden-paws-mobile-pet-pedicures-100084290471506/"
-            >
-              @Goldenpawsmobile
-            </a>
-          </div>
-          <div>
-            <MapPin color="black" />
-            <span>Treasure Valley, Idaho</span>
-          </div>
+          <Mail color="black" />
+          <a className="external-link" href="mailto:Goldenpawsmobile@gmail.com">
+            Goldenpawsmobile@gmail.com
+          </a>
+        </div>
+
+        <div id="logo-container">
+          <img className="logo" src={logo}></img>
+        </div>
+
+        <div className="contact">
+          <Share2 color="black" />
+          <a
+            className="external-link"
+            href="https://www.facebook.com/p/Golden-paws-mobile-pet-pedicures-100084290471506/"
+          >
+            @Goldenpawsmobile
+          </a>
+        </div>
+
+        <div className="contact">
+          <MapPin color="black" />
+          <span>Treasure Valley, Idaho</span>
         </div>
       </header>
       <img id="background" src={backgroundPic}></img>
