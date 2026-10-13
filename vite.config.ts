@@ -8,5 +8,6 @@ export default defineConfig({
   server: {
     open: true,
   },
-  base: "/GoldenPaws/",
+  // GitHub Pages serves the site from /GoldenPaws/, Netlify serves it from the root
+  base: process.env.NETLIFY ? "/" : "/GoldenPaws/",
 });
