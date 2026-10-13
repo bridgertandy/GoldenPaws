@@ -2,14 +2,12 @@ header {
   background-color: var(--logo-creme);
   padding: 10px;
   margin: 10px;
-  /* width: 95%; */
   height: 10vh;
   border-radius: 10px;
   box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.7);
   z-index: 10;
   position: fixed;
   inset: 0 2.5% 0 2.5%;
-  /* left: 1.25%; */
   display: flex;
   gap: 10px;
   justify-content: space-between;
@@ -19,13 +17,35 @@ header {
   }
 
   #logo-container {
+    order: 1;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
+  #phone {
+    order: 2;
+  }
+
+  #email,
+  #social,
+  #service-area {
+    display: none;
+  }
+
   img {
     height: 100%;
-    aspect-ratio: 1.25 / 1;
+    aspect-ratio: 1.6 / 1;
+  }
+
+  @media (min-width: 1025px) {
+    #email,
+    #social,
+    #service-area,
+    #phone,
+    #logo-container {
+      order: 0;
+      display: flex;
+    }
   }
 }

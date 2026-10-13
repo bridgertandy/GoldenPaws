@@ -2,20 +2,21 @@ import logo from "./assets/logo.jpg";
 import backgroundPic from "./assets/boise.png";
 import "./styling/App.css";
 import "./styling/header.css";
+import "./styling/footer.css";
 import { Mail, MapPin, Phone, Share2 } from "lucide-react";
 
 function App() {
   return (
     <>
       <header>
-        <div className="contact">
+        <div id="phone" className="contact">
           <Phone color="black" />
           <a className="external-link" href="tel:+12089849293">
             (208) 984-9293
           </a>
         </div>
 
-        <div className="contact">
+        <div id="email" className="contact">
           <Mail color="black" />
           <a className="external-link" href="mailto:Goldenpawsmobile@gmail.com">
             Goldenpawsmobile@gmail.com
@@ -26,7 +27,7 @@ function App() {
           <img className="logo" src={logo}></img>
         </div>
 
-        <div className="contact">
+        <div id="social" className="contact">
           <Share2 color="black" />
           <a
             className="external-link"
@@ -36,12 +37,14 @@ function App() {
           </a>
         </div>
 
-        <div className="contact">
+        <div id="service-area" className="contact">
           <MapPin color="black" />
           <span>Treasure Valley, Idaho</span>
         </div>
       </header>
+
       <img id="background" src={backgroundPic}></img>
+
       <main>
         <section id="center">
           <h1>Our Mission</h1>
@@ -154,7 +157,44 @@ function App() {
         </section>
         <div className="ticks"></div>
       </main>
-      <footer></footer>
+      <footer>
+        <div>
+          <i>Contact us for an appointment!</i>
+          <span>
+            Phone:{" "}
+            <a className="external-link" href="tel:+12089849293">
+              208-984-9293
+            </a>
+          </span>
+
+          <span>
+            Email:{" "}
+            <a
+              className="external-link"
+              href="mailto:Goldenpawsmobile@gmail.com"
+            >
+              Goldenpawsmobile@gmail.com
+            </a>
+          </span>
+
+          <span>
+            {" "}
+            Facebook/Instagram:{" "}
+            <a
+              className="external-link"
+              href="https://www.facebook.com/p/Golden-paws-mobile-pet-pedicures-100084290471506/"
+            >
+              @Goldenpawsmobile
+            </a>
+          </span>
+        </div>
+        <div id="logo-container">
+          <img id="footer-logo" className="logo" src={logo}></img>
+        </div>{" "}
+      </footer>
+      <div id="secret">
+        <span>Use code "Finley" for 10% off your first appointment!</span>
+      </div>
     </>
   );
 }

@@ -1,0 +1,27 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px 10vw;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#footer-logo {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  footer > div {
+    align-items: flex-start;
+  }
+
+  #footer-logo {
+    display: inline;
+    height: 100px;
+  }
+}
