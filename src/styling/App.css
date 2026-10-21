@@ -26,7 +26,6 @@ main {
 }
 
 .external-link {
-  font-family: var(--sans);
   color: black;
 
   &:hover {
