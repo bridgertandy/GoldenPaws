@@ -11,6 +11,7 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "lucide": "^1.58.0",
     "lucide-react": "^1.27.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"

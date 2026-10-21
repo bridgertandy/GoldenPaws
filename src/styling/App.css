@@ -16,11 +16,12 @@ main {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
 }
 
 img-#background {
   margin: 0;
-  width: 100%;
+  width: 100vw;
   height: auto;
 }
 
@@ -132,6 +133,7 @@ img-#background {
 }
 
 #secret {
+  text-align: center;
   > span {
     visibility: hidden;
     opacity: 0;
