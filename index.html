@@ -19,36 +19,39 @@
   </head>
 
   <body>
+    <!-- Header -->
     <header>
-      <div id="phone" class="contact">
-        <a class="external-link" href="tel:+12089849293">
-          <i data-lucide="phone"></i>
-          (208) 984-9293
-        </a>
-      </div>
+      <a id="phone" class="external-link" href="tel:+12089849293">
+        <i data-lucide="phone"></i>
+        <span>208-984-9293</span>
+      </a>
 
-      <div id="email" class="contact">
-        <a class="external-link" href="mailto:Goldenpawsmobile@gmail.com">
-          <i data-lucide="mail"></i>
-          Goldenpawsmobile@gmail.com
-        </a>
-      </div>
+      <a
+        id="email"
+        class="external-link"
+        href="mailto:Goldenpawsmobile@gmail.com"
+      >
+        <i data-lucide="mail"></i>
+        Goldenpawsmobile@gmail.com
+      </a>
 
-      <div id="logo-container">
-        <img class="logo" src="./src/assets/logo.jpg" alt="Golden Paws logo" />
-      </div>
+      <img
+        id="logo-container"
+        class="logo"
+        src="./src/assets/logo.jpg"
+        alt="Golden Paws logo"
+      />
 
-      <div id="social" class="contact">
-        <a
-          class="external-link"
-          href="https://www.facebook.com/p/Golden-paws-mobile-pet-pedicures-100084290471506/"
-        >
-          <i data-lucide="share-2"></i>
-          @Goldenpawsmobile
-        </a>
-      </div>
+      <a
+        id="social"
+        class="external-link"
+        href="https://www.facebook.com/p/Golden-paws-mobile-pet-pedicures-100084290471506/"
+      >
+        <i data-lucide="share-2"></i>
+        @Goldenpawsmobile
+      </a>
 
-      <div id="service-area" class="contact">
+      <div id="service-area">
         <i data-lucide="map-pin"></i>
         <span>Treasure Valley, Idaho</span>
       </div>
@@ -57,6 +60,7 @@
     <img id="background" src="./src/assets/boise.png" alt="Boise landscape" />
 
     <main>
+      <!-- Mission statement -->
       <section id="center">
         <h1>Our Mission</h1>
         <p>
@@ -67,6 +71,8 @@
         </p>
       </section>
       <div class="ticks"></div>
+
+      <!-- Services -->
       <section>
         <h1>Services</h1>
         <p>
@@ -170,8 +176,43 @@
         </div>
       </section>
       <div class="ticks"></div>
+
+      <!-- FAQ -->
+      <section>
+        <h1>FAQ</h1>
+        <ul id="faq">
+          <li class="faq-item">
+            <button
+              class="faq-button"
+              aria-expanded="false"
+              aria-controls="faq-answer-1"
+            >
+              <span>What do you use to trim the nails?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer" id="faq-answer-1">Test</div>
+          </li>
+          <li class="faq-item">
+            <button
+              class="faq-button"
+              aria-expanded="false"
+              aria-controls="faq-answer-1"
+            >
+              <span>What do you use to trim the nails?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer" id="faq-answer-1">Test</div>
+          </li>
+        </ul>
+      </section>
+      <div class="ticks"></div>
+
+      <!-- Reviews -->
+      <section><h1>Reviews</h1></section>
+      <div class="ticks"></div>
     </main>
 
+    <!-- Footer -->
     <footer>
       <div>
         <i>Contact me for an appointment!</i>
@@ -214,6 +255,18 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script>
       lucide.createIcons();
+    </script>
+
+    <!-- FAQ functionality -->
+    <script>
+      const faqButtons = document.querySelectorAll(".faq-button");
+
+      faqButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const isExpanded = button.getAttribute("aria-expanded") === "true";
+          button.setAttribute("aria-expanded", !isExpanded);
+        });
+      });
     </script>
   </body>
 </html>

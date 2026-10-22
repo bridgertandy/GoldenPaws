@@ -2,16 +2,6 @@ section {
   margin: 15px;
 }
 
-.contact {
-  color: black;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
 main {
   width: 100%;
   max-width: 1200px;
@@ -105,30 +95,67 @@ main {
   }
 }
 
+/* Whole list */
+#faq {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* List item */
+.faq-item {
+  color: black;
+  padding: 5px;
+  font-weight: bold;
+  border: 2px solid var(--logo-gold);
+  border-radius: 10px;
+
+  /* Button for a list item */
+  & button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 0;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  /* Select the element with class .faq-answer when its sibling button has aria-expanded='true' */
+  & button[aria-expanded="true"] + .faq-answer {
+    visibility: visible;
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
+
+/* Base state for all elements with class .faq-answer */
+.faq-answer {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+
+  transition: all 0.5s ease-in-out;
+
+  font-weight: normal;
+  align-items: start;
+  text-align: left;
+  text-indent: 2em;
+}
+
 .ticks {
   position: relative;
   width: 100vw;
   left: 50%;
   transform: translateX(-50%);
   border-top: 2px solid var(--logo-gold);
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: -5.6px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--color-soft-white);
-  }
-
-  &::after {
-    right: 0;
-    border-right-color: var(--color-soft-white);
-  }
 }
 
 #secret {
