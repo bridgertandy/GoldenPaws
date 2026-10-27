@@ -1,0 +1,13 @@
+#contact-container {
+  display: grid;
+
+  margin: 1em;
+  gap: 1em;
+
+  a {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    place-content: center;
+  }
+}

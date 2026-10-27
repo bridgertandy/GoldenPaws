@@ -16,52 +16,42 @@
     <link rel="stylesheet" href="./src/styling/App.css" />
     <link rel="stylesheet" href="./src/styling/header.css" />
     <link rel="stylesheet" href="./src/styling/footer.css" />
+    <link rel="stylesheet" href="./src/styling/contact.css" />
   </head>
 
   <body>
+    <a id="top"></a>
     <!-- Header -->
     <header>
-      <a id="phone" class="external-link" href="tel:+12089849293">
+      <img
+        id="logo-container"
+        class="logo"
+        src="./src/assets/logo-small.jpg"
+        alt="Golden Paws logo"
+      />
+
+      <a id="phone" class="link" href="tel:+12089849293">
         <i data-lucide="phone"></i>
         <span>208-984-9293</span>
       </a>
 
-      <a
-        id="email"
-        class="external-link"
-        href="mailto:Goldenpawsmobile@gmail.com"
-      >
-        <i data-lucide="mail"></i>
-        Goldenpawsmobile@gmail.com
-      </a>
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#contact">Contact</a>
+      <a class="link" href="#faq">FAQ</a>
+      <a class="link" href="#reviews">Reviews</a>
+      <a class="link" href="#top"><i data-lucide="chevron-up"></i></a>
 
-      <img
-        id="logo-container"
-        class="logo"
-        src="./src/assets/logo.jpg"
-        alt="Golden Paws logo"
-      />
-
-      <a
-        id="social"
-        class="external-link"
-        href="https://www.facebook.com/p/Golden-paws-mobile-pet-pedicures-100084290471506/"
-      >
-        <i data-lucide="share-2"></i>
-        @Goldenpawsmobile
-      </a>
-
-      <div id="service-area">
+      <!-- <div id="service-area">
         <i data-lucide="map-pin"></i>
         <span>Treasure Valley, Idaho</span>
-      </div>
+      </div> -->
     </header>
 
-    <img id="background" src="./src/assets/boise.png" alt="Boise landscape" />
+    <img id="background" src="./src/assets/boise2.png" alt="Boise landscape" />
 
     <main>
       <!-- Mission statement -->
-      <section id="center">
+      <section id="center" class="odd">
         <h1>Our Mission</h1>
         <p>
           Golden Paws was founded on giving your dog the "Spa Experience"
@@ -73,7 +63,7 @@
       <div class="ticks"></div>
 
       <!-- Services -->
-      <section>
+      <section id="services" class="even">
         <h1>Services</h1>
         <p>
           <u>Service fees</u>
@@ -177,8 +167,35 @@
       </section>
       <div class="ticks"></div>
 
+      <!-- Contact -->
+      <section id="contact" class="odd">
+        <h1>Contact</h1>
+        <i>Join the pack!</i>
+        <div id="contact-container">
+          <a id="phone" class="link" href="tel:+12089849293">
+            <i data-lucide="phone"></i>
+            <span>208-984-9293</span>
+          </a>
+
+          <a id="email" class="link" href="mailto:Goldenpawsmobile@gmail.com">
+            <i data-lucide="mail"></i>
+            Goldenpawsmobile@gmail.com
+          </a>
+
+          <a
+            id="social"
+            class="link"
+            href="https://www.facebook.com/p/Golden-paws-mobile-pet-pedicures-100084290471506/"
+          >
+            <i data-lucide="share-2"></i>
+            @Goldenpawsmobile
+          </a>
+        </div>
+      </section>
+      <div class="ticks"></div>
+
       <!-- FAQ -->
-      <section>
+      <section id="faq" class="even">
         <h1>FAQ</h1>
         <ul id="faq">
           <li class="faq-item">
@@ -208,7 +225,10 @@
       <div class="ticks"></div>
 
       <!-- Reviews -->
-      <section><h1>Reviews</h1></section>
+      <section id="reviews" class="odd">
+        <h1>Reviews</h1>
+        <div id="reviews-root"></div>
+      </section>
       <div class="ticks"></div>
     </main>
 
@@ -218,12 +238,12 @@
         <i>Contact me for an appointment!</i>
         <span>
           Phone:
-          <a class="external-link" href="tel:+12089849293">208-984-9293</a>
+          <a class="link" href="tel:+12089849293">208-984-9293</a>
         </span>
 
         <span>
           Email:
-          <a class="external-link" href="mailto:Goldenpawsmobile@gmail.com"
+          <a class="link" href="mailto:Goldenpawsmobile@gmail.com"
             >Goldenpawsmobile@gmail.com</a
           >
         </span>
@@ -231,7 +251,7 @@
         <span>
           Facebook/Instagram:
           <a
-            class="external-link"
+            class="link"
             href="https://www.facebook.com/p/Golden-paws-mobile-pet-pedicures-100084290471506/"
             >@Goldenpawsmobile</a
           >
@@ -257,7 +277,7 @@
       lucide.createIcons();
     </script>
 
-    <!-- FAQ functionality -->
+    <!-- FAQ functionality script -->
     <script>
       const faqButtons = document.querySelectorAll(".faq-button");
 
