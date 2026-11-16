@@ -1,8 +1,8 @@
 import logo from "./assets/logo.jpg";
 import backgroundPic from "./assets/boise.png";
-import "./styling/App.css";
-import "./styling/header.css";
-import "./styling/footer.css";
+import "../styling/App.css";
+import "../styling/header.css";
+import "../styling/footer.css";
 import { Mail, MapPin, Phone, Share2 } from "lucide-react";
 
 function App() {
