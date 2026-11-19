@@ -15,7 +15,7 @@ main {
 }
 
 @media (min-width: 1025px) {
-  section {
+  section:not(#reviews) {
     padding: 1em 8em;
   }
 
@@ -130,7 +130,7 @@ main {
 
 /* List item */
 .faq-item {
-  background-color: var(--);
+  background-color: var(--background-2);
   color: black;
   padding: 5px;
   font-weight: bold;
