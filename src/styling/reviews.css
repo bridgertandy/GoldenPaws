@@ -47,6 +47,8 @@
 
 .rating-container {
   display: flex;
+  gap: 1em;
+  justify-content: center;
 
   .stars-container {
     position: relative;
@@ -55,13 +57,19 @@
     .empty-stars,
     .full-stars {
       font-size: 2em;
-      position: absolute;
-      left: 0;
-      transform: translateX(50%);
+      user-select: none;
+      white-space: nowrap;
     }
 
     .full-stars {
       color: var(--logo-gold);
+      position: absolute;
+      width: 60%;
+      overflow-x: hidden;
+    }
+
+    .empty-stars {
+      /* color: transparent; */
     }
   }
 }
