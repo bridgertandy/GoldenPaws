@@ -1,5 +1,11 @@
 #reviews {
   padding: 1em 0;
+
+  a {
+    display: inline-flex;
+    gap: 0.5em;
+    margin-top: 1em;
+  }
 }
 
 #reviews-container {
@@ -47,7 +53,7 @@
 
 .rating-container {
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
   justify-content: center;
 
   .stars-container {
@@ -64,12 +70,7 @@
     .full-stars {
       color: var(--logo-gold);
       position: absolute;
-      width: 60%;
       overflow-x: hidden;
-    }
-
-    .empty-stars {
-      /* color: transparent; */
     }
   }
 }

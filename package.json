@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "concurrently -k \"vite\" \"npm run server\"",
+    "mobile": "concurrently -k \"vite --host\" \"npm run server\"",
     "server": "tsx server/server.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
